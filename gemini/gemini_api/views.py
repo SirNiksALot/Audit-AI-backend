@@ -38,7 +38,7 @@ def assess(image_path) -> str:
 
     image = PIL.Image.open(image_path)
 
-    client = genai.Client(api_key=os.getenv("API_KEY"))
+    client = genai.Client(api_key="AIzaSyBb5poBl9RArJinjKAxXGe7vg3L6jsBAzo")
     response = client.models.generate_content(
         model="gemini-2.0-flash",
         contents=["Extract the expiry date , if the product is damaged or not , if the product is opened or not in the given format . If Expiry date is not present return 'NA' ", image],
